@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humood's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #73430A;
+        }
+
+        header {
+            background-color: #73430A;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            max-height: 50px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            background-color: #1a0a00;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+            padding: 5px;
+        }
+
+        nav a:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .main-content {
+            flex: 1;
+            max-width: 700px;
+            margin-right: 20px;
+        }
+
+        .intro {
+            margin-bottom: 40px;
+        }
+
+        .intro h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .intro p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .featured-project {
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .featured-project img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .project-details {
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        .project-details h3 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .project-details p {
+            font-size: 16px;
+            margin: 10px 0 0;
+        }
+
+        .contact {
+            margin-bottom: 40px;
+        }
+
+        .contact h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .contact a {
+            background-color: #73430A;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+
+        .contact a:hover {
+            background-color: #5B2F07;
+        }
+
+        .side-logo {
+            width: 150px;
+            margin-left: 20px;
+            position: sticky;
+            top: 100px;
+        }
+
+        .side-logo img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        @media only screen and (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+
+            .main-content {
+                margin-right: 0;
+                margin-bottom: 40px;
+            }
+
+            .side-logo {
+                margin: 0 auto;
+                position: static;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>      
+    <img src="https://cdn.discordapp.com/attachments/1049016109954777170/1133906536205402152/final_product_maybe.png" alt="Your Logo">
+        <h1>Humood's Portfolio</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="index.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <main>
+        <div class="main-content">
+            <section class="intro">
+                <h2>Welcome to My Portfolio</h2>
+                <p>Experienced graphics designer specializing in logo design, with a keen eye for detail and creativity. Known for crafting captivating Roleplay and other logos. Collaborated with renowned ERLC servers, each having 7 to 9k members. Passionate about bringing visions to life and delivering visually striking designs that leave a lasting impression. </p>
+            </section>
+            <section class="featured-project">
+                <div class="project-details">
+                    <h3>Featured Project</h3>
+                    <p>Please take a moment to explore my recent portfolio, where I demonstrate my expertise in logo design. Allow me to elaborate on the time and dedication I invest in crafting each logo. Generally, for a high-quality logo design without any specific reference provided, I allocate approximately 48 hours of meticulous work to ensure its excellence.
+
+                        I also offer expedited services for clients seeking swift delivery without compromising on the quality of the logo. Such premium services cater to those with higher budget allocations.
+                        
+                        In summary, the timeline required for logo design varies depending on the complexity and scope of the project, as well as the level of detail provided by the client during the initial briefing. Rest assured, I am committed to delivering exceptional logo designs tailored to meet the unique needs and preferences of each customer.</p>
+                </div>
+            </section>
+            <section class="contact">
+                <h2>Contact Me</h2>
+                <p>If you have any questions or would like to discuss a project, feel free to get in touch with me.</p>
+                <a href="contact.html">Contact Now</a>
+            </section>
+        </div>
+        <aside class="side-logo">
+            <img src="https://cdn.discordapp.com/attachments/1049016109954777170/1133906536205402152/final_product_maybe.png" alt="Your Side Logo">
+        </aside>
+    </main>
+</body>
+</html>

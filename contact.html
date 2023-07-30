@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Humood's Portfolio</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header img {
+            max-height: 50px; /* Adjust the height of your logo */
+            margin-right: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+            color: #fff;
+        }
+
+        nav {
+            background-color: #1a0a00;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+            padding: 5px;
+        }
+
+        nav a:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-form button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #1a0a00;
+        }
+
+        .contact-form p.success {
+            color: #27ae60;
+        }
+
+        .contact-form p.error {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+ <img src="https://cdn.discordapp.com/attachments/1049016109954777170/1133906536205402152/final_product_maybe.png" alt="Your Logo">
+    <h1>Humood's Portfolio</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="index.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <main>
+        <div class="contact-form">
+            <h2>Contact Me</h2>
+            <form id="contactForm" action="send_email.php" method="post">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+            <p class="success" style="display: none;">Thank you! Your message has been sent successfully.</p>
+            <p class="error" style="display: none;">Oops! Something went wrong. Please try again later.</p>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Me</h2>
+            <form id="contactForm" action="send_email.php" method="post">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+            <p class="success" style="display: none;">Thank you! Your message has been sent successfully.</p>
+            <p class="error" style="display: none;">Oops! Something went wrong. Please try again later.</p>
+        </div>
+    </main>
+    <script>
+        // Handle form submission using JavaScript (Optional)
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var form = event.target;
+            var data = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: data,
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    form.reset();
+                    document.querySelector(".success").style.display = "block";
+                    document.querySelector(".error").style.display = "none";
+                } else {
+                    document.querySelector(".success").style.display = "none";
+                    document.querySelector(".error").style.display = "block";
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
